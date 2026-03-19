@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativo de Estudos Inteligente</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00d4ff;
+      text-shadow: 0 0 10px #00d4ff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d4ff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #00d4ff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #00d4ff;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,212,255,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: rgba(255,255,255,0.1);
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    button {
+      background: linear-gradient(90deg, #00d4ff, #0077ff);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0077ff, #00d4ff);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aplicativo de Estudos Inteligente</h1>
+    <nav>
+      <ul>
+        <li><a href="#plano">Plano de Estudos</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+        <li><a href="#calendario">Calendário</a></li>
+        <li><a href="#tarefas">Tarefas</a></li>
+        <li><a href="#temas">Temas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="dicas">
+    <h2>Dicas de Estudos</h2>
+    <div class="card" id="dicaCard">
+      <p id="dicaTexto">Clique no botão abaixo para receber uma dica de estudo!</p>
+      <button onclick="mostrarDica()">Nova Dica</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Aplicativo de Estudos Inteligente | Desenvolvido por Felipe</p>
+  </footer>
+
+  <script>
+    const dicas = [
+      "Faça resumos ao final de cada capítulo para fixar melhor o conteúdo.",
+      "Use a técnica Pomodoro: 25 minutos de foco e 5 de descanso.",
+      "Explique a matéria em voz alta como se estivesse ensinando alguém.",
+      "Resolva exercícios práticos para aplicar a teoria.",
+      "Revise conteúdos antigos semanalmente para não esquecer.",
+      "Estude em um ambiente organizado e livre de distrações."
+    ];
+
+    function mostrarDica() {
+      const dicaAleatoria = dicas[Math.floor(Math.random() * dicas.length)];
+      document.getElementById("dicaTexto").innerText = dicaAleatoria;
+    }
+  </script>
+</body>
+</html>

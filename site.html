@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativo de Estudos Inteligente</title>
+  <style>
+    /* Estilo Frutiger Aero: gradientes, transparência e estética futurista */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00d4ff;
+      text-shadow: 0 0 10px #00d4ff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d4ff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #00d4ff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #00d4ff;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,212,255,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: rgba(255,255,255,0.1);
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    button {
+      background: linear-gradient(90deg, #00d4ff, #0077ff);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0077ff, #00d4ff);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aplicativo de Estudos Inteligente</h1>
+    <nav>
+      <ul>
+        <li><a href="#plano">Plano de Estudos</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+        <li><a href="#calendario">Calendário</a></li>
+        <li><a href="#tarefas">Tarefas</a></li>
+        <li><a href="#temas">Temas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="plano">
+    <h2>Plano de Estudos Personalizado</h2>
+    <div class="card">
+      <p>Seu plano de estudos gerado pela IA aparecerá aqui, com horários, matérias e métodos sugeridos.</p>
+      <button>Gerar Plano</button>
+    </div>
+  </section>
+
+  <section id="dicas">
+    <h2>Dicas de Estudos</h2>
+    <div class="card">
+      <p>Dicas específicas por matéria para melhorar seu desempenho.</p>
+      <a href="dicas.html">
+        <button>Dicas</button>
+      </a>
+    </div>
+  </section>
+
+  <section id="calendario">
+    <h2>Calendário de Desempenho</h2>
+    <div class="card">
+      <p>Visualize seu progresso diário e sessões concluídas.</p>
+      <button>Acessar Calendário</button>
+    </div>
+  </section>
+
+  <section id="tarefas">
+    <h2>Lista de Tarefas</h2>
+    <div class="card">
+      <p>Cadastre, edite e exclua suas tarefas com data e matéria.</p>
+      <button>Gerenciar Tarefas</button>
+    </div>
+  </section>
+
+  <section id="temas">
+    <h2>Personalização de Temas</h2>
+    <div class="card">
+      <p>Escolha entre temas visuais pré-definidos para deixar sua interface única.</p>
+      <button>Alterar Tema</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Aplicativo de Estudos Inteligente | Desenvolvido por Felipe</p>
+  </footer>
+</body>
+</html>
